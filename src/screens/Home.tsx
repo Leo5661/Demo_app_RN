@@ -14,7 +14,7 @@ const Home = (props: Props) => {
   };
 
   return (
-    <View className="h-full w-full flex flex-col p-4">
+    <View className="h-full w-full flex flex-col p-4 bg-white">
       <Text className="text-black/80 text-xl font-semibold">{`Today’s Games`}</Text>
       <View className="flex flex-col mt-4">
         <View className="flex flex-col bg-[#6231AD] p-4">
