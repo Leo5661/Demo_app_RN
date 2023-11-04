@@ -1,16 +1,21 @@
 import {View, Text, Image} from 'react-native';
-import React from 'react';
+import React, {useCallback, useMemo, useRef} from 'react';
 import UnderOverButton from '../components/UnderOverButton';
+import {BottomSheetModal} from '@gorhom/bottom-sheet';
+import CustomBottomSheet from '../components/CustomBottomSheet';
 
 type Props = {};
 
 const Home = (props: Props) => {
+  const bottomSheetRef = useRef<BottomSheetModal>(null);
+
   const handleUnder = () => {
     console.log('Under');
   };
 
   const handleOver = () => {
     console.log('Over');
+    bottomSheetRef.current?.present();
   };
 
   return (
@@ -124,6 +129,8 @@ const Home = (props: Props) => {
           </View>
         </View>
       </View>
+
+      <CustomBottomSheet ref={bottomSheetRef} />
     </View>
   );
 };

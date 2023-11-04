@@ -1,6 +1,8 @@
 import React from 'react';
 import RootNavigator from './src/navigation/RootNavigator';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {BottomSheetModalProvider} from '@gorhom/bottom-sheet';
 
 const bottomNavBarTheme = {
   ...DefaultTheme,
@@ -13,9 +15,13 @@ const bottomNavBarTheme = {
 
 function App(): JSX.Element {
   return (
-    <PaperProvider theme={bottomNavBarTheme}>
-      <RootNavigator />
-    </PaperProvider>
+    <GestureHandlerRootView className="flex-grow">
+      <BottomSheetModalProvider>
+        <PaperProvider theme={bottomNavBarTheme}>
+          <RootNavigator />
+        </PaperProvider>
+      </BottomSheetModalProvider>
+    </GestureHandlerRootView>
   );
 }
 

@@ -50,7 +50,9 @@ const BottomNavigator = () => {
         component={Leagues}
         options={{
           tabBarLabel: 'Leagues',
-          tabBarIcon: ({color}) => <LeaguesSvg width={20} height={20} />,
+          tabBarIcon: ({color}) => (
+            <LeaguesSvg width={20} height={20} fill={color} />
+          ),
         }}
       />
 
@@ -59,7 +61,9 @@ const BottomNavigator = () => {
         component={Research}
         options={{
           tabBarLabel: 'Research',
-          tabBarIcon: ({color}) => <ResearchSvg width={20} height={20} />,
+          tabBarIcon: ({color}) => (
+            <ResearchSvg width={20} height={20} fill={color} />
+          ),
         }}
       />
 
@@ -68,7 +72,9 @@ const BottomNavigator = () => {
         component={Leaderboard}
         options={{
           tabBarLabel: 'Leaderboard',
-          tabBarIcon: ({color}) => <LeaderboardSvg width={20} height={20} />,
+          tabBarIcon: ({color}) => (
+            <LeaderboardSvg width={20} height={20} fill={color} />
+          ),
         }}
       />
 
@@ -77,7 +83,9 @@ const BottomNavigator = () => {
         component={Profile}
         options={{
           tabBarLabel: 'Profile',
-          tabBarIcon: ({color}) => <PersonSvg width={20} height={20} />,
+          tabBarIcon: ({color}) => (
+            <PersonSvg width={20} height={20} fill={color} />
+          ),
         }}
       />
     </BottomNavStack.Navigator>
