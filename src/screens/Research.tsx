@@ -1,14 +1,11 @@
 import {View, Text} from 'react-native';
 import React from 'react';
+import NoPage from '../components/NoPage';
 
 type Props = {};
 
 const Research = (props: Props) => {
-  return (
-    <View>
-      <Text className="text-black">Research</Text>
-    </View>
-  );
+  return <NoPage />;
 };
 
 export default Research;

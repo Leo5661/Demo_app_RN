@@ -23,7 +23,7 @@ const renderTabBar = (props: any) => (
 
 const History = (props: Props) => {
   const layout = useWindowDimensions();
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
   const [routes] = React.useState([
     {key: 'first', title: 'Games Played'},
     {key: 'second', title: 'Badges'},

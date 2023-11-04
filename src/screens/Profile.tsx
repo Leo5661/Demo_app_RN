@@ -10,7 +10,7 @@ type Props = {};
 
 const Profile = (props: Props) => {
   return (
-    <View className="h-full w-full flex flex-col p-4 bg-white mb-20">
+    <View className="w-full flex flex-col p-4 bg-white">
       <View className="flex-row justify-between items-center">
         <Image
           className="w-8 h-8"

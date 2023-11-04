@@ -9,11 +9,11 @@ type Props = {
 
 const BadgesCard = ({item}: Props) => {
   return (
-    <View className="flex-row p-2">
+    <View className="flex-row p-3 m-2 bg-white">
       <View className="flex justify-center items-center">
         <BadgeIconSvg width={60} height={60} />
       </View>
-      <View className="flex-col flex-grow items-start ps-2">
+      <View className="flex-col justify-evenly pl-2 flex-grow items-start">
         <View className="w-full flex-row items-center">
           <Text className="text-base font-semibold text-black/80">
             {item.title}
